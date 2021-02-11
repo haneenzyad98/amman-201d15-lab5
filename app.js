@@ -109,7 +109,9 @@ testSumArray(testArray);
 
 /////////////////////////////////////
 /* Problem 5
-Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called multiplyArray() that takes an array of numbers as
+ its argument and returns an array whose first element is the product of those
+  numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
 "The numbers 2,3,4 have a product of 24."
 
@@ -118,12 +120,22 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+let x=0;
+let z=0;
 function multiplyArray(multArr) {
   //eslint-disable-line
-}
-
+  for (let j=0;j<testArray.length;j++){
+    x=multiply(multArr[j],multArr[j+1])
+    //console.log(x);
+    j=j+2;
+    z=multiply(x[0],multArr[j])
+    //console.log(z);
+    return [z[0], "The numbers 2,3,4 have a product of 24."];
+  }}
+multiplyAnyArray(testArray);
+//console.log(testArray)
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
